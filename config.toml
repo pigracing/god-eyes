@@ -1,0 +1,39 @@
+# 全局设置
+[settings]
+# 检查周期，单位为秒
+check_interval_seconds = 300
+
+# 通知服务的配置
+[notification]
+# 通知渠道
+n_channel = "bark"
+# 你的通知API地址
+url = "https://api.day.app/xxxx" #推荐使用bark免费推送
+# 如果你的通知API需要认证，可以添加一个key
+api_key = "your-secret-notify-key"
+# 发送通知的超时时间
+timeout = 10
+
+# -------------------------------------------------------------------
+# 要检查的API服务列表,支持OpenAI兼容接口
+# 你可以按需添加任意多个 [[services]] 块
+# -------------------------------------------------------------------
+
+
+
+[[services]]
+name = "openai"
+base_url = "https://api.openai.com/v1"
+api_key = "sky-xxxx"
+models = [
+    { type = "chat", name = "gpt4o" },
+    { type = "chat", name = "gpt4.1" }
+]
+
+[[services]]
+name = "openai-tts"
+base_url = "https://api.openai.com/v1"
+api_key = "SKY-TTS"
+models = [
+    { type = "tts", name = "alloy" }
+]
