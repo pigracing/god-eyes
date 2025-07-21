@@ -42,6 +42,3 @@ services：API 服务列表，支持多种模型类型。
 
 7. **License**
 MIT
-
-
-你可以直接将此内容保存到 [README.md](http://_vscodecontentref_/0)。
