@@ -15,4 +15,33 @@ god-eyes 是一个用于实时监控多个 API 服务健康状态的工具。它
 1. **安装依赖**
 
    ```sh
-   pip install -r requirements.txt
+   uv sync
+
+2. **配置服务**
+
+编辑 config.toml，添加你需要监控的 API 服务和推送设置。
+
+3. **运行监控**
+   ```sh
+   python main.py
+
+4. **查看报告**
+
+检查结果会在控制台输出，并通过 Bark 推送到你的设备。
+
+5. **配置说明**
+settings.check_interval_seconds：检查周期（秒）。
+notification.n_channel：推送渠道（目前支持 bark）。
+notification.url：Bark 推送 API 地址。
+services：API 服务列表，支持多种模型类型。
+
+6. **适用场景**
+监控 OpenAI 兼容接口的可用性
+及时发现 API 服务异常并推送告警
+团队运维自动化监控
+
+7. **License**
+MIT
+
+
+你可以直接将此内容保存到 [README.md](http://_vscodecontentref_/0)。
